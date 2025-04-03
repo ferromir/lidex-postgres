@@ -9,10 +9,6 @@ on:
   pull_request:
     branches: [ "main" ]
 
-env:
-  TESTCONTAINERS_HOST_OVERRIDE: "host.docker.internal"
-  # TESTCONTAINERS_RYUK_DISABLED: "true"
-
 jobs:
   build:
 
@@ -22,6 +18,10 @@ jobs:
       matrix:
         node-version: [18.x, 20.x, 22.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+
+    env:
+      TESTCONTAINERS_HOST_OVERRIDE: "host.docker.internal"
+      TESTCONTAINERS_RYUK_DISABLED: "true"
 
     steps:
     - uses: actions/checkout@v4
