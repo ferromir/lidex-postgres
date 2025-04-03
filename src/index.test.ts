@@ -11,7 +11,7 @@ beforeEach(async () => {
   container = await new PostgreSqlContainer().start();
   const uri = container.getConnectionUri();
   persistence = await makePostgresPersistence(uri);
-});
+}, 60_000);
 
 afterEach(async () => {
   await persistence.terminate();
