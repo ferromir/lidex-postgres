@@ -11,7 +11,7 @@ on:
 
 env:
   TESTCONTAINERS_HOST_OVERRIDE: "host.docker.internal"
-  TESTCONTAINERS_RYUK_DISABLED: "true"
+  # TESTCONTAINERS_RYUK_DISABLED: "true"
 
 jobs:
   build:
