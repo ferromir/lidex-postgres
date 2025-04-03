@@ -21,7 +21,7 @@ jobs:
 
     env:
       TESTCONTAINERS_HOST_OVERRIDE: "host.docker.internal"
-      TESTCONTAINERS_RYUK_DISABLED: "true"
+      # TESTCONTAINERS_RYUK_DISABLED: "true"
 
     steps:
     - uses: actions/checkout@v4
